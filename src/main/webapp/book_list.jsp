@@ -11,6 +11,12 @@
 <body>
 	<span>Üdvözlöm <c:out value="${username}"></c:out>.
 	<a href="${pageContext.request.contextPath}/logout">Kilépés</a></span>
+	
+	<form action="book_search" method="post">
+		<span>Keresés szerző szerint</span></br>
+		<input type="text" name="author"/>
+		<input type="submit" name="Mentés"/>
+	</form>
 
 	<table border= "1">
 		<tr>
@@ -32,7 +38,7 @@
 				<a href="book_details?bookId=${book.id}" >Megtekintés</a>
 <%-- 				<c:if test="${isEditor}"> --%>
 					<a href="book_edit?bookId=${book.id}" >Szerkesztés</a>
-					<a href="book_edit?bookId=${book.id}" >Törlés</a>
+					<a href="book_delete?bookId=${book.id}" >Törlés</a>
 <%-- 				</c:if> --%>
 				</td>
 			</tr>

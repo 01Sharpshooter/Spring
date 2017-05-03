@@ -166,4 +166,10 @@ public class BookServiceNativeDbImpl implements BookService {
 		}
 	}
 
+	@Override
+	public List<Book> listBooksByAuthor(String author) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
